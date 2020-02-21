@@ -1,26 +1,29 @@
 
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavBar from "./components/NavBar/NavBar" ;
 import fire from './config/Firebase';
-import NavBar from './components/NavBar/NavBar';
 import Home from './pages/Home';
-import Favorites from './pages/Favorites';
-// import Login from './components/Login/Login';
+import Poster from "./pages/Poster"
+import Seeker from "./pages/Seeker"
 
-class App extends Component {
 
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <Route exact path="/" component={Home} />
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+ <Route exact path="/" component={Home} />
+           <Route exact path="/apartments" component={Poster} />
+          <Route exact path="/api" component={Seeker}/>
           <Route exact path="/favorites" component={Favorites} />
-          {/* {this.state.user ? (<Home />) : (<Favorites />)} */}
-        </div>
-      </Router>
-    );
-  }
+
+        </Switch>
+      </div>
+    </Router>
+  );
 
 }
 

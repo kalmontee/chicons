@@ -200,6 +200,7 @@ class NavBar extends Component {
 
             {signUpModalRender}
             {signInModalRender}
+
          </div>
       )
    }
