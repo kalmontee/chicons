@@ -1,12 +1,3 @@
-/* body {
-  margin: 0;
-  padding: 0;
-  background: #efefef;
-  font-size: 16px;
-  color: #777;
-  font-family: sans-serif;
-  font-weight: 300;
-} */
 
 #login-box {
   display: flex;
@@ -17,6 +8,10 @@
   width: 50%;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+  z-index: 2;
+=======
+
 }
 
 .left-box {
@@ -36,7 +31,10 @@
   font-size: 28px;
 }
 
-input[type="text"],
+
+input[type="email"],
+
+
 input[type="password"] {
   display: block;
   box-sizing: border-box;
@@ -53,7 +51,10 @@ input[type="password"] {
   transition: 0.2s ease;
 }
 
-input[type="submit"] {
+
+button[type="submit"] {
+
+
   margin-bottom: 28px;
   width: 120px;
   height: 32px;
@@ -74,9 +75,16 @@ input[type="submit"]:focus {
   transition: 0.2s ease;
 }
 
-.example {
+
+.signUpBackground {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTXkKz3ZrrqDXnJPFY2Gyp_tP_4HqwqEGPNZV3Lf6X1UXvbPCm3);
+  background-size: cover;
+  background-position: center;
+}
+
+.signInBackground {
   background-image: url(https://hookagency.com/wp-content/uploads/2015/11/epic-blue-green-gradient-ui-background.jpg);
-  /* background-image: url(https://lh3.googleusercontent.com/proxy/N69sLlxZVSxw5uDu9SfF0-4oNMBd0_-dH-ti6meTA8-lqOaK7_aOHT64APclxv0HkbOz0C6sicxtBIsMHLkZ96NOMHhAYIqXdYAHsHfL1HALIKBYieSlj3kbAvkUiClUn4gbqjzkuIpANr_ctOl_cQ); */
+
   background-size: cover;
   background-position: center;
 }
@@ -107,18 +115,6 @@ div.exit-btn button {
   text-align: center;
 }
 
-/* .or {
-  position: relative;
-  top: 180px;
-  left: 280px;
-  width: 40px;
-  height: 40px;
-  background: #efefef;
-  border-radius: 50%;
-  box-shadow: 0 20px 4px rgba(0, 0, 0, 0.6);
-  line-height: 40px;
-  text-align: center;
-} */
 
 .right-box .signInWith {
   display: block;

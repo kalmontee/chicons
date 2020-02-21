@@ -1,0 +1,20 @@
+.navbar-signout {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 8px 10px;
+  font-size: 15px;
+  background: transparent;
+  color: white;
+  margin: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar-signout:hover {
+  background: #fbbc05;
+  color: #000000;
+  transition: 0.4s ease-in;
+}

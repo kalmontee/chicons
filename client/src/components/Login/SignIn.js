@@ -1,38 +1,65 @@
-import React, { Component } from 'react';
+
+import React from 'react';
+import 'firebase/app';
 import './login.css';
 
-export class SignIn extends Component {
-  render() {
-    return (
+function SignIn(props) {
+   return (
       <div>
-        <div id="login-box">
-          <div class="left-box">
-            <h1 id="signUp">Sign In</h1>
+         <div id="login-box"
+            style={{
+               transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
+               opacity: props.show ? '1' : '0',
+               transition: props.show ? "0.4s ease-in" : "0"
+            }}>
+            <div className="left-box">
+               <h1 id="signUp">Sign In</h1>
+               {/* <form> */}
+                  <input
+                     value={props.email}
+                     onChange={props.handleChange}
+                     type="email"
+                     name="email"
+                     placeholder="Email" />
 
-            <input type="text" name="email" placeholder="Email" />
-            <input type="password" name="password" placeholder="Password" />
+                  <input
+                     value={props.password}
+                     onChange={props.handleChange}
+                     type="password"
+                     name="password"
+                     placeholder="Password" />
 
-            <input type="submit" name="signup-button" value="Sign Up" />
-          </div>
+                  <button
+                     onClick={() => props.loginBtn()}
+                     type="submit">
+                     Enter
+                  </button>
+               {/* </form> */}
 
-          <div class="example">
-            <div class="exit-btn">
-              <button id="exit">X</button>
+               <p style={{ color: "red" }}>{props.message}</p>
             </div>
 
-            <div class="right-box">
-              <span class="signInWith">Sign in with <br /> Social Network</span>
+            <div className="signInBackground">
+               <div className="exit-btn">
+                  <button
+                     onClick={() => props.closeModalHandler()}
+                     id="exit">
+                     X
+                  </button>
+               </div>
 
-              <button class="social facebook">Log in with Facebook</button>
-              <button class="social twitter">Log in with Twitter</button>
-              <button class="social google">Log in with Google</button>
+               <div className="right-box">
+                  <span className="signInWith">Sign in with <br /> Social Network</span>
 
+                  <button className="social facebook" onClick={() => props.authWithFacebook()}>Log in with Facebook</button>
+                  <button className="social google" onClick={() => props.authWithGoogle()}>Log in with Google</button>
+                  <button className="social twitter">Log in with Twitter</button>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
+         </div>
+      </div >
+   )
+
 }
 
 export default SignIn;

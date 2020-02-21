@@ -5,6 +5,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+
   padding: 10px 20px;
   background: #007bff;
   color: #fff;
@@ -17,12 +18,44 @@ div.navbar-links span {
   font-size: 18px;
   padding: 0 5px;
   cursor: pointer;
+
+  display: none;
+}
+
+.favorites {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  border-bottom: 1px #fff solid;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.favoritesLinkClick {
+  color: #000000;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.favorites:hover,
+.favoritesLinkClick:hover {
+  text-decoration: none;
+  color: #d4d4d4;
+  transition: 0.5s ease-in;
+}
+
+div.navbar-title a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+  
 }
 
 div.navbar-title {
   font-size: 20px;
   font-family: sans-serif;
   cursor: pointer;
+
 }
 
 .navbar-signUp,
@@ -36,14 +69,25 @@ div.navbar-title {
   border-radius: 5px;
   box-sizing: border-box;
   text-transform: uppercase;
+  text-decoration: none;
   font-weight: 500;
   cursor: pointer;
 }
 
 .navbar-signUp:hover,
 .navbar-signIn:hover {
-  background: #34a853;
   background: #fbbc05;
   color: #000000;
   transition: 0.4s ease-in;
 }
+
+.back-drop {
+  /* background-color: rgba(48, 49, 48, 0.42); */
+  background-color: rgba(48, 49, 48, 1);
+  height: 100%;
+  position: fixed;
+  transition: all 1.3s;
+  width: 100%;
+  z-index: 1;
+}
+
