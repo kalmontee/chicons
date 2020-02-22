@@ -20,18 +20,21 @@ function SignIn(props) {
                      onChange={props.handleChange}
                      type="email"
                      name="email"
-                     placeholder="Email" />
+                     placeholder="Email"
+                     className="signInEmailInput" />
 
                   <input
                      value={props.password}
                      onChange={props.handleChange}
                      type="password"
                      name="password"
-                     placeholder="Password" />
+                     placeholder="Password"
+                     className="signInPasswordInput" />
 
                   <button
                      onClick={() => props.loginBtn()}
-                     type="submit">
+                     type="submit"
+                     className="signInBtn">
                      Enter
                   </button>
                {/* </form> */}

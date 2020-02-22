@@ -6,12 +6,9 @@ const apartmentSchema = new Schema({
     address: { type: String, required: true },
     bedrooms: { type: String, required: true },
     description: { type: String, required: true },
-    phonenumber: { type: Number, required: true },
-    id: { type: String, required: true, unique: true },
-
+    phonenumber: { type: String, required: true },
 });
 
 const Apartment = mongoose.model("Apartment", apartmentSchema);
 
 module.exports = Apartment;
-

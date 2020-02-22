@@ -1,4 +1,3 @@
-
 #login-box {
   display: flex;
   flex-flow: row;
@@ -8,10 +7,7 @@
   width: 50%;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-
   z-index: 2;
-=======
-
 }
 
 .left-box {
@@ -31,11 +27,10 @@
   font-size: 28px;
 }
 
-
-input[type="email"],
-
-
-input[type="password"] {
+input.signInEmailInput,
+input.signInPasswordInput,
+input.signUpEmailInput,
+input.signUpPasswordInput {
   display: block;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -51,10 +46,8 @@ input[type="password"] {
   transition: 0.2s ease;
 }
 
-
-button[type="submit"] {
-
-
+button.signInBtn,
+button.signUpBtn {
   margin-bottom: 28px;
   width: 120px;
   height: 32px;
@@ -69,12 +62,11 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+button[type="submit"]:hover,
+button[type="submit"]:focus {
   background: #ff5722;
   transition: 0.2s ease;
 }
-
 
 .signUpBackground {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTXkKz3ZrrqDXnJPFY2Gyp_tP_4HqwqEGPNZV3Lf6X1UXvbPCm3);
@@ -114,7 +106,6 @@ div.exit-btn button {
   width: 100%;
   text-align: center;
 }
-
 
 .right-box .signInWith {
   display: block;

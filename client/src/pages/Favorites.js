@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import API from "../utils/API";
 import NavBar from '../components/NavBar/NavBar';
 
 class Favorites extends Component {

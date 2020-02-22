@@ -24,20 +24,27 @@ class NavBar extends Component {
 
    navBarSignInBtn = () => this.setState({ signInModal: true });
 
-   closeModalHandler = () => this.setState({ signUpModal: false, signInModal: false });
+   closeModalHandler = () => this.setState({ signUpModal: false, signInModal: false, message: "" });
 
-   handleChange = (event) => this.setState({ [event.target.name]: event.target.value });
+   hideModalLogins = () => this.setState({ signInModal: false, signUpModal: false });
 
+   handleChange = (event) => {
+      const { name, value } = event.target;
+      this.setState({ [name]: value });
+   }
+
+   // Logout btn
    logOutHandlerBtn = () => {
       fire.auth().signOut();
       this.setState({ redirect: true });
    }
 
+   // Sign In/Up with Facebook
    authWithFacebook = () => {
       fire.auth().signInWithPopup(facebookProvider)
          .then((result, err) => {
             if (err) {
-               alert("Unable to sign in with Facebook");
+               alert("Unable to sign in with Facebook...please try again.");
             } else {
                this.setState({ signUpModal: false, signInModal: false });
             }
@@ -45,12 +52,13 @@ class NavBar extends Component {
          .catch(err => alert(err));
    }
 
+   // Sign In/Up with Google
    authWithGoogle = () => {
       console.log("CLick")
       fire.auth().signInWithPopup(googleProvider)
          .then((result, err) => {
             if (err) {
-               alert("Unable to sign in with Google")
+               alert("Unable to sign in with Google...please try again.")
             } else {
                this.setState({ signUpModal: false, signInModal: false })
             }
@@ -71,20 +79,18 @@ class NavBar extends Component {
       });
    }
 
-   hideModalLogins = () => this.setState({ signInModal: false, signUpModal: false });
-
    loginBtn = () => {
       const email = this.state.email;
       const password = this.state.password;
 
-      // this.setState({ message: "*Incorrect Password" });
-
       fire.auth().signInWithEmailAndPassword(email, password)
          .then(user => {
+            console.log(user);
             this.hideModalLogins();
          })
          .catch(err => {
-            alert(err);
+            console.log(err);
+            this.setState({ message: "*Incorrect Password or Email" });
             this.setState({ signInModal: true });
          });
    }
@@ -95,21 +101,23 @@ class NavBar extends Component {
 
       fire.auth().createUserWithEmailAndPassword(email, password)
          .then(user => {
+            console.log(user);
             this.hideModalLogins();
          })
          .catch(err => {
-            alert(err);
+            console.log(err);
+            this.setState({ message: "*The email address is already in use by another account. Please try another one." });
             this.setState({ signUpModal: true });
-         })
+         });
    }
 
    // ============================================================= render
 
    render() {
 
-      // if (this.state.redirect === true) {
-      //    return <Redirect to="/" />
-      // }
+      if (this.state.redirect === true) {
+         return <Redirect to="/" />
+      }
 
       let signUpModalRender = null;
       if (this.state.signUpModal) {
@@ -117,6 +125,7 @@ class NavBar extends Component {
             <SignUp
                email={this.props.email}
                password={this.props.password}
+               message={this.state.message}
                show={this.state.signUpModal}
                handleChange={this.handleChange}
                closeModalHandler={this.closeModalHandler}
@@ -144,13 +153,13 @@ class NavBar extends Component {
          )
       }
 
-      let userIsLogInOrSignOut = null;
+      let userIsLogInRender, userIsSignOutRender = null;
       if (this.state.user !== null) {
-         userIsLogInOrSignOut = (
+         userIsLogInRender = (
             <Logout logOutHandlerBtn={this.logOutHandlerBtn} />
          )
       } else {
-         userIsLogInOrSignOut = (
+         userIsSignOutRender = (
             <div className="navbar-login">
                <button
                   onClick={this.navBarSignUpBtn}
@@ -166,6 +175,15 @@ class NavBar extends Component {
          )
       }
 
+      // let closeModalHandlerRender = null;
+      // if (this.state.signUpModal || this.state.signInModal) {
+      //    closeModalHandlerRender = (
+      //       <div onClick={this.closeModalHandler} className="back-drop"></div>
+      //    )
+      // } else {
+      //    return null;
+      // }
+
       return (
          <div>
             {this.state.signInModal || this.state.signUpModal ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null}
@@ -179,12 +197,16 @@ class NavBar extends Component {
                   </div>
                ) : (
                      <div>
-                        <Link to="/favorites" className={window.location.pathname === "/favorites" ? "favorites" : "favoritesLinkClick"}>
+                        <Link to="/favorites" className={window.location.pathname === "/favorites" ? "navbarTabsLink" : "favoritesLinkClick"}>
                            Favorites
                         </Link>
 
-                        <Link to="/post" className={window.location.pathname === "/post" ? "favorites active" : "favoritesLinkClick"}>
-                           Post
+                        <Link to="/apartments" className={window.location.pathname === "/apartments" ? "navbarTabsLink" : "favoritesLinkClick"}>
+                           Apartments
+                        </Link>
+
+                        <Link to="/api" className={window.location.pathname === "/api" ? "navbarTabsLink" : "favoritesLinkClick"}>
+                           Seeker
                         </Link>
                      </div>
                   )}
@@ -195,7 +217,8 @@ class NavBar extends Component {
                   </Link>
                </div>
 
-               {userIsLogInOrSignOut}
+               {userIsLogInRender}
+               {userIsSignOutRender}
             </nav>
 
             {signUpModalRender}

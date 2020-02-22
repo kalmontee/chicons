@@ -19,20 +19,25 @@ function SignUp(props) {
                   onChange={props.handleChange}
                   type="email"
                   name="email"
-                  placeholder="Email" />
+                  placeholder="Email"
+                  className="signUpEmailInput" />
 
                <input
                   value={props.password}
                   onChange={props.handleChange}
                   type="password"
                   name="password"
-                  placeholder="Password" />
+                  placeholder="Password"
+                  className="signUpPasswordInput" />
 
                <button
                   onClick={() => props.signUp()}
-                  type="submit">
+                  type="submit"
+                  className="signUpBtn">
                      Submit
                </button>
+
+               <p style={{ color: "red" }}>{props.message}</p>
             </div>
 
             <div className="signUpBackground">

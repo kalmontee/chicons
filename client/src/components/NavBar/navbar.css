@@ -19,11 +19,10 @@ div.navbar-links span {
   font-size: 18px;
   padding: 0 5px;
   cursor: pointer;
-
   display: none;
 }
 
-.favorites {
+.navbarTabsLink {
   color: rgb(255, 255, 255);
   font-size: 1rem;
   border-bottom: 1px #fff solid;
@@ -38,7 +37,7 @@ div.navbar-links span {
   margin-right: 10px;
 }
 
-.favorites:hover,
+.navbarTabsLink:hover,
 .favoritesLinkClick:hover {
   text-decoration: none;
   color: #d4d4d4;

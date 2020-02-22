@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
-import Jumbotron from "../components/Jumbotron/Jumbotron"
+import NavBar from '../components/NavBar/NavBar';
+import { JumbotronApartments } from "../components/Jumbotron/Jumbotron";
 
-export class Seeker extends Component {
-    
-    render() {
-        return (
-            <div>
-               <Jumbotron/>
-            </div>
-        )
-    }
+class Seeker extends Component {
+
+   render() {
+      return (
+         <div>
+            <NavBar />
+            <JumbotronApartments />
+         </div>
+      )
+   }
 }
 
-export default Seeker
+export default Seeker;

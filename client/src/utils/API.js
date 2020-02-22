@@ -1,6 +1,12 @@
 import axios from "axios";
 
+const BASEURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
+const APIKEY = "&key=AIzaSyAE2CIuMnHiuUN7XLs9fRiATGN1gD-t0LY";
+
 export default {
+  // testing 
+  searchApartments: (address, city, state) => axios.get(`${BASEURL},+${address}, ${city},+${state},+${APIKEY}`),
+
   // Gets all books
   getApartments: function() {
     return axios.get("/api/apartments");
