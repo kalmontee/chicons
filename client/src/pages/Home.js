@@ -15,7 +15,6 @@ class Home extends Component {
       API.searchApartments(search)
          .then(res => {
             console.log(res.data.results[0]);
-
             // this.setState({
             //    apartments: res.query,
             //    search: this.state.search,

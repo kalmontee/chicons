@@ -23,6 +23,14 @@ export default {
     return axios.post("/api/apartments", apartmentData);
   },
 
+  setSavedApartments: function (id) {
+   return axios.put("/api/apartments/" + id);
+    
+},
+favedApartments: function() {
+  return axios.get("/api/apartments/test")
+}
+
   searchApartments(search) {
     return axios.get("/api/apartments/google/" + search)
   },
@@ -30,9 +38,9 @@ export default {
   // firebaseKey(apiKey) {
   //   console.log(axios.get("/api/apartments/firebase"));
 
-
   //   return axios.get("/api/apartments/firebase/", apiKey);
   // }
+
 };
 
 // 234 52nd St West New York, New Jersey 

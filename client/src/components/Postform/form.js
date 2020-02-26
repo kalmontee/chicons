@@ -2,7 +2,7 @@ import React from "react";
 import "./form.css";
 
 const Post = props => {
-    
+
     return (
         <form>
             <div className="form-group">
@@ -11,26 +11,36 @@ const Post = props => {
                         <label className="ApartmentPostLabel"><h3>Post your apartment for rent</h3></label>
                         <br></br>
                         <input className="form-control"
+                            value={props.username}
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                            onChange={props.handleInputChange}
+                            />
+                        <br></br>
+                        <input className="form-control"
                             value={props.address}
                             type="text"
                             name="address"
                             placeholder="Address"
                             onChange={props.handleInputChange}
+                            
                         />
                     </div>
                 </div>
                 <br></br>
                 <input className="form-control"
-                    value={props.bedrooms}
+                    value={props.bedroom}
                     type="text"
-                    name="bedrooms"
+                    name="bedroom"
                     placeholder="Bedrooms"
                     onChange={props.handleInputChange}
+                  
                 />
                 <br></br>
-                <label className="label" for="exampleFormControlTextarea1">Apartment Description</label>
+                <label className="label">Apartment Description</label>
                 <textarea className="form-control" rows="5"
-                
+
                     value={props.description}
                     type="text"
                     name="description"
@@ -38,11 +48,12 @@ const Post = props => {
                 />
                 <br></br>
                 <input className="form-control"
-                    value={props.number}
+                    value={props.phonenumber}
                     type="number"
                     name="phonenumber"
                     placeholder="phone number"
                     onChange={props.handleInputChange}
+                    
 
                 />
 

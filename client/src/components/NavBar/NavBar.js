@@ -68,7 +68,7 @@ class NavBar extends Component {
 
    authListener = () => {
       fire.auth().onAuthStateChanged((user) => {
-         console.log(user);
+        
 
          if (user) {
             this.setState({ user });
@@ -212,7 +212,7 @@ class NavBar extends Component {
                   )}
 
                <div className="navbar-title">
-                  <Link to="/" className={window.location.pathname === "/"}>
+                  <Link to="/" className={window.location.pathname === "/"?"":""}>
                      DreamHome
                   </Link>
                </div>

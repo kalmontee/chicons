@@ -10,14 +10,21 @@ const FIREBASE = process.env.REACT_APP_FIREBASE_API_KEY;
 
 // Defining methods for the booksController
 module.exports = {
-  findAll: function (req, res) {
+  findAll: function(req, res) {
     db.Apartment
       .find(req.query)
-      .sort({ date: -1 })
+      // .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findById: function (req, res) {
+
+  findFav: function(req, res) {
+    console.log(req.body)
+    db.Apartment.find({saved: true}).then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+    
+  findById: function(req, res) {
     db.Apartment
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
@@ -30,9 +37,11 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  update: function (req, res) {
+  update: function(req, res) {
+    console.log(req.body)
+
     db.Apartment
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ _id: req.params.id }, {saved: true})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

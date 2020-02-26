@@ -1,12 +1,17 @@
 const router = require("express").Router();
 const aptController = require("../../controllers/aptControllers");
 
+
+router
+.route("/test")
+.get(aptController.findFav)
+
 // Matches with "/api/apartments"
 router.route("/")
   .get(aptController.findAll)
   .post(aptController.create);
 
-// Matches with "/api/apartments/:id"
+ // Matches with "/api/apartments/:id"
 router
   .route("/:id")
   .get(aptController.findById)
