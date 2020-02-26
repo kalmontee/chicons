@@ -22,6 +22,6 @@ function MapContainer(props) {
 }
 
 export default GoogleApiWrapper({
-   apiKey: 'AIzaSyAE2CIuMnHiuUN7XLs9fRiATGN1gD-t0LY&callback=initMap'
+   apiKey: ''
 })(MapContainer);
 

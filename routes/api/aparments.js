@@ -13,4 +13,15 @@ router
   .put(aptController.update)
   .delete(aptController.remove);
 
+router
+  .route("/google/:search")
+  .get(aptController.google);
+
+// router
+// .route("/firebase/:apiKey")
+// .get(aptController.firebase);
+
+// console.log(router.route("/firebase")
+// .get(aptController.firebase));
+
 module.exports = router;

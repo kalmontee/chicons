@@ -7,47 +7,26 @@ import API from '../utils/API';
 class Home extends Component {
    state = {
       search: '',
-      apartments: []
+      apartments: [],
    }
 
    // Making a request to Google Maps API (geocode)
-   searchApartmentLocation = (query) => {
-      API.searchApartments(query)
+   searchApartmentLocation = (search) => {
+      API.searchApartments(search)
          .then(res => {
-            console.log(res.data);
+            console.log(res.data.results[0]);
 
-            let userLat = (res.results[0].geometry.location.lat);
-            let userLng = (res.results[0].geometry.location.lng);
-
-            let map, infoWindow, google;
-            let pos = {
-               lat: userLat,
-               lng: userLng
-            }
-
-            infoWindow = new google.maps.InfoWindow;
-            map = new google.maps.Map(document.getElementById('map'), {
-               center: {
-                  lat: userLat,
-                  lng: userLng,
-               },
-
-               zoom: 15
-            });
-
-            console.log(map)
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('You.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-
-            this.setState({
-               apartments: res.results,
-               search: this.state.search,
-            });
+            // this.setState({
+            //    apartments: res.query,
+            //    search: this.state.search,
+            // });
          })
-         .catch(err => console.log(err));
+         .catch(err => {
+            console.log(err)
+            // this.setState({
+            //    apartments: []
+            // });
+         });
    }
 
    handleSearchInput = (event) => {
@@ -75,3 +54,7 @@ class Home extends Component {
 }
 
 export default Home;
+
+
+// Set the state for initialCenter when user searches for a location.
+// Set the lat and lng
