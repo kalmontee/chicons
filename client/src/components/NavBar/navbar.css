@@ -63,8 +63,8 @@ div.navbar-title {
   border: 1px solid rgb(255, 255, 255);
   padding: 8px 10px;
   font-size: 15px;
-  background: transparent;
   color: white;
+  background: transparent;
   margin: 0;
   border-radius: 5px;
   box-sizing: border-box;
@@ -79,15 +79,15 @@ div.navbar-title {
   background: #fbbc05;
   color: #000000;
   transition: 0.4s ease-in;
+  text-decoration: none;
 }
 
-.back-drop {
-  /* background-color: rgba(48, 49, 48, 0.42); */
+/* .back-drop {
   background-color: rgba(48, 49, 48, 1);
   height: 100%;
   position: fixed;
   transition: all 1.3s;
   width: 100%;
   z-index: 1;
-}
+} */
 

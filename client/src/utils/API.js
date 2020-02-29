@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const APIKEY = process.env.REACT_APP_GOOGLE_API_KEY;
+// const APIKEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 export default {
   // testing 
@@ -24,12 +24,12 @@ export default {
   },
 
   setSavedApartments: function (id) {
-   return axios.put("/api/apartments/" + id);
-    
-},
-favedApartments: function() {
-  return axios.get("/api/apartments/test")
-}
+    return axios.put("/api/apartments/" + id);
+
+  },
+  favedApartments: function () {
+    return axios.get("/api/apartments/test")
+  },
 
   searchApartments(search) {
     return axios.get("/api/apartments/google/" + search)

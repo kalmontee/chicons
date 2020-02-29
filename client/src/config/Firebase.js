@@ -1,8 +1,8 @@
 import firebase from 'firebase';
-import API from '../utils/API';
+// import API from '../utils/API';
 
 const firebaseConfig = {
-   apiKey: "", // throw env.API key here 
+   apiKey: "AIzaSyDqxhTMQT80qfWlyrqqRi19ahFLwM5bSRo", // throw env.API key here 
    authDomain: "chicons-c4c7d.firebaseapp.com",
    databaseURL: "https://chicons-c4c7d.firebaseio.com",
    projectId: "chicons-c4c7d",
@@ -12,7 +12,6 @@ const firebaseConfig = {
    measurementId: "G-FX1FHKP4TV"
 };
 
-// const base = Rebase.createClass(app.database())
 const fire = firebase.initializeApp(firebaseConfig);
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
