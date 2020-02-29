@@ -8,11 +8,12 @@ import Home from './pages/Home';
 import Poster from "./pages/Poster";
 import Seeker from "./pages/Seeker";
 import Favorites from "./pages/Favorites";
+import Second from "./pages/Second"
 
 const ProtectedProfile = withAuthProtection('/apartments')(Poster)
 // const ProtectedFavorites = withAuthProtection('/SignIn')(Favorites)
 class App extends Component {
-
+  
   state = {
     user: fire.auth().currentUser,
   }
@@ -34,6 +35,7 @@ class App extends Component {
 
             <Route exact path="/SignIn" component={SignIn} />
             <Route exact path="/SignUp" component={SignUp} />
+            <Route exact path="/api" component={Second}/>
 
             <Route exact
               path='/apartments'

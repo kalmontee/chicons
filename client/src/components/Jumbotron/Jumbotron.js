@@ -40,3 +40,14 @@ export function JumbotronApartments() {
       </div>
    )
 }
+
+export function JumbotronSecond() {
+   return(
+      <div className="jumbotron jumbotronSecond jumbotron-fluid">
+         <div className="container">
+            <h1 className="display-4">Apartamentos</h1>
+            <p className="lead">Type an Address to See Rental Estimates</p>
+         </div>
+      </div>
+   )
+}

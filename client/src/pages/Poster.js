@@ -4,6 +4,7 @@ import Postform from "../components/Postform/form";
 import { JumbotronApartments } from "../components/Jumbotron/Jumbotron";
 import NavBar from "../components/NavBar/NavBar";
 import { Col, Row } from "../components/Grid/Grid"
+import Modal from "../components/Modal/modal"
 
 
 class Poster extends Component {
@@ -76,7 +77,6 @@ class Poster extends Component {
           />
           <Col size="1" className="emptyCol" />
 
-     
         </Row>
       </div>
     )

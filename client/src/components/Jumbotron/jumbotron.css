@@ -9,6 +9,17 @@
   color: white;
 }
 
+.jumbotronSecond {
+  background-image: url("https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80");
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  color: white;
+}
+
 .jumbotronHome {
   background: #2c323c;
   background-image: url(https://www.itl.cat/pngfile/big/227-2271722_night-sky-1080p.jpg);
