@@ -23,7 +23,10 @@
     "axios": "^0.18.1",
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
+    "gsap": "^3.2.4",
     "if-env": "^1.0.4",
-    "mongoose": "^5.3.16"
+    "mongoose": "^5.3.16",
+    "node-sass": "^4.13.1",
+    "react-transition-group": "^4.3.0"
   }
 }

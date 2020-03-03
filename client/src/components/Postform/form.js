@@ -4,7 +4,7 @@ import "./form.css";
 const Post = props => {
 
     return (
-        <form>
+        <form id="form">
             <div className="form-group">
                 <div className="row">
                     <div className="col-sm">
@@ -14,7 +14,7 @@ const Post = props => {
                             value={props.username}
                             type="text"
                             name="username"
-                            placeholder="Username"
+                            placeholder="Name"
                             onChange={props.handleInputChange}
                             />
                         <br></br>

@@ -1,6 +1,15 @@
-import React from "react";
-export default class Modal extends React.Component {
-  render() {
-    return <div>Hello Modal</div>;
-  }
-}
+// import React from "react";
+
+
+// const Modal = props => {
+
+//     return (
+//     <div className={props.modal}>
+      
+//     </div>
+//     )
+// }
+
+
+
+// export default Modal

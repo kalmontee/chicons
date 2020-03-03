@@ -5,6 +5,7 @@ import { Container } from "../components/Grid/Grid"
 import SavedApt from "../components/SavedApt/savedApt";
 
 
+
 class Favorites extends Component {
    state = {
       favedApartments: []

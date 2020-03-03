@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import withAuthProtection from './components/AuthProtection';
 import { fire } from './config/Firebase';
@@ -9,6 +9,10 @@ import Poster from "./pages/Poster";
 import Seeker from "./pages/Seeker";
 import Favorites from "./pages/Favorites";
 import Second from "./pages/Second"
+
+
+
+
 
 const ProtectedProfile = withAuthProtection('/apartments')(Poster)
 // const ProtectedFavorites = withAuthProtection('/SignIn')(Favorites)

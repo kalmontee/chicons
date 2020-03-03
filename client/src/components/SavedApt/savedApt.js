@@ -7,7 +7,7 @@ const SavedApt = props => {
         <div className="card">
             <div className="card-body player">
                 <div className="article">
-                    <h3>Apartments You've Favored</h3>
+                    <h3>Apartments that You've Favored</h3>
                 </div>
             </div>
         </div>
@@ -31,13 +31,16 @@ const SavedApt = props => {
                                             <h2 className="aptAddress">{favedapartment.address}</h2>
                                         </Row>
                                         <Row>
-                                            <h3 className="aptBedrooms">{favedapartment.bedrooms}</h3>
+                                            <h3 className="aptBedrooms">Bedrooms: {favedapartment.bedroom}</h3>
                                         </Row>
                                         <Row>
-                                            <p className="aptDescription">{favedapartment.description}</p>
+                                            <p className="aptDescription">Description: {favedapartment.description}</p>
                                         </Row>
                                         <Row>
-                                            <p className="aptPhoneNumber">{favedapartment.description}</p>
+                                            <p className="aptPhoneNumber">Contact Info: {favedapartment.phonenumber}</p>
+                                        </Row>
+                                        <Row>
+                                            <p className="aptUserName">Owner: {favedapartment.username}</p>
                                         </Row>
                                     </Col>
                                 </Row>

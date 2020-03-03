@@ -4,7 +4,7 @@ import Postform from "../components/Postform/form";
 import { JumbotronApartments } from "../components/Jumbotron/Jumbotron";
 import NavBar from "../components/NavBar/NavBar";
 import { Col, Row } from "../components/Grid/Grid"
-import Modal from "../components/Modal/modal"
+// import Modal from "../components/Modal/modal"
 
 
 class Poster extends Component {
@@ -76,7 +76,25 @@ class Poster extends Component {
             handleInputChange={this.handleInputChange}
           />
           <Col size="1" className="emptyCol" />
+{/* <Modal
+ className="modal" tabindex="-1" role="dialog">
+<div className="modal-dialog" role="document">
+  <div className="modal-content">
+    <div className="modal-header">
+      <h5 className="modal-title">Thank You</h5>
+     
+    </div>
+    <div className="modal-body">
+      <p>Your Apartment Has been Posted</p>
+    </div>
+    <div className="modal-footer">
+      <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+      
+    </div>
+  </div>
+</div>
 
+</Modal> */}
         </Row>
       </div>
     )

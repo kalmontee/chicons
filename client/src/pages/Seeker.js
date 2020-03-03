@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar/NavBar';
 import { JumbotronApartments } from "../components/Jumbotron/Jumbotron";
 import API from "../utils/API"
 import { Col, Row, Container } from "../components/Grid/Grid"
+import Image from "../components/SeekerImage/image"
 
 
 
@@ -48,11 +49,13 @@ class Seeker extends Component {
          <div>
             <NavBar />
             <JumbotronApartments />
+           
+            
             <Container fluid>
                <Row>
                   <Col size="md-6">
 
-
+                  <Image/>
                   </Col>
                   <Col size="md-6 sm-12">
 
@@ -60,7 +63,7 @@ class Seeker extends Component {
 
 
                         <li className="saved-list list-group-item">
-                           <h3>Apartments in our database</h3>
+                           <h3 className="header">Listed Apartments</h3>
                            {this.state.apartments.map(apartment => (
                               <Row key={apartment._id}>
 
@@ -69,13 +72,13 @@ class Seeker extends Component {
 
                                     <Row>
 
-                                       {apartment.address}
+                                     {apartment.address}
                                     </Row>
                                     <Row>
-                                       {apartment.bedroom}
+                                    <p>Bedrooms: {apartment.bedroom}</p>
                                     </Row>
                                     <Row>
-                                       {apartment.description}
+                                       <p>Description: {apartment.description}</p>
                                     </Row>
                                     <Row>
                                        {apartment.phonenumber}
@@ -100,7 +103,9 @@ class Seeker extends Component {
                   </Col>
                </Row>
             </Container>
+
          </div>
+         
       )
    }
 }
