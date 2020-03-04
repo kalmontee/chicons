@@ -9,10 +9,6 @@ import Poster from "./pages/Poster";
 import Seeker from "./pages/Seeker";
 import Favorites from "./pages/Favorites";
 
-
-
-
-
 const ProtectedProfile = withAuthProtection('/apartments')(Poster)
 // const ProtectedFavorites = withAuthProtection('/SignIn')(Favorites)
 class App extends Component {

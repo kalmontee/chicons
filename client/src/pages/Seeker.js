@@ -49,8 +49,6 @@ class Seeker extends Component {
          <div>
             <NavBar />
             <JumbotronApartments />
-           
-            
             <Container fluid>
                <Row>
                   <Col size="md-6">
@@ -60,26 +58,24 @@ class Seeker extends Component {
                   <Col size="md-6 sm-12">
 
                      {this.state.apartments.length ? (
-
-
                         <li className="saved-list list-group-item">
                            <h3 className="header">Listed Apartments</h3>
                            {this.state.apartments.map(apartment => (
                               <Row key={apartment._id}>
-
                                  <Col size="1" className="emptyCol" />
                                  <Col size="9" className="aptInfo">
-
                                     <Row>
-
                                      {apartment.address}
                                     </Row>
+                                    
                                     <Row>
                                     <p>Bedrooms: {apartment.bedroom}</p>
                                     </Row>
+
                                     <Row>
                                        <p>Description: {apartment.description}</p>
                                     </Row>
+
                                     <Row>
                                        {apartment.phonenumber}
                                     </Row>

@@ -3,7 +3,7 @@ import axios from "axios";
 var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice?address=21%20Jefferson%20Ave%20Jersey%20City%20NJ&compCount=5",
+  "url": "https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice?address=21%20Jefferson%20Ave%20Jersey%20City%20NJ&compCount=10",
   "method": "GET",
   "headers": {
     "x-rapidapi-host": "realtymole-rental-estimate-v1.p.rapidapi.com",
