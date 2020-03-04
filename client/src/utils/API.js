@@ -13,7 +13,9 @@ var settings = {
 export default {
   // testing 
   // searchApartments: (address, city, state) => axios.get(`${BASEURL},+${address}, ${city},+${state},+${APIKEY}`),
-  search: function () {
+  // return axios("https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice?compCount=5&latitude=" + latitude +
+  // "&longitude=" + longitude + "&rapidapi-key=ff2af2325emsha371561b7ddfacdp1148eajsnd3bfbea4cf52");
+  searchApartments: function () {
     return axios(settings);
   },
   // Gets all apartments
@@ -33,12 +35,12 @@ export default {
     return axios.post("/api/apartments", apartmentData);
   },
   setSavedApartments: function (id) {
-   return axios.put("/api/apartments/" + id);  
+    return axios.put("/api/apartments/" + id);
   },
-  favedApartments: function() {
-  return axios.get("/api/apartments/test")
+  favedApartments: function () {
+    return axios.get("/api/apartments/test")
   },
-  searchApartments(search) {
+  googleMaps(search) {
     return axios.get("/api/apartments/google/" + search)
   },
 };

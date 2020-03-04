@@ -105,7 +105,7 @@ export class SignIn extends Component {
                <button
                   onClick={() => this.createAccountRedirect()}
                   type="submit"
-                  className="">
+                  className="redirect-btn">
                   Create An Account
                </button>
                {/* </form> */}
@@ -233,7 +233,7 @@ export class SignUp extends Component {
                <button
                   onClick={() => this.signInAccountRedirect()}
                   type="submit"
-                  className="">
+                  className="redirect-btn">
                   Sign In
                </button>
 

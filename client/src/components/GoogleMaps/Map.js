@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 function MapContainer(props) {
    const mapStyles = {
-      width: '60%',
-      height: '100%',
+      width: '56%',
+      height: '95%',
+      position: "fixed"
    }
 
    return (
@@ -14,16 +15,20 @@ function MapContainer(props) {
          zoom={props.zoom}
          style={mapStyles}
          onClick={props.onMapClicked}
-         center={{
-            lat: props.lat,
-            lng: props.lng
-         }}>
+         center={{ lat: props.lat, lng: props.lng }}>
 
-         <Marker
-            title={props.title}
-            name={"West New York"}
-            position={{ lat: props.lat, lng: props.lng }}
-         />
+         {props.markers.map(marker => {
+            const onClick = props.onClick.bind(this, marker)
+            return (
+               < Marker
+                  key={marker.id}
+                  title={marker.address}
+                  onClick={onClick}
+                  name={marker.address}
+                  position={{ lat: marker.latitude, lng: marker.longitude }}
+               />
+            )
+         })}
 
          <InfoWindow onClose={props.onInfoWindowClose} >
             <div>

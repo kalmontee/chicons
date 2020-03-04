@@ -7,9 +7,9 @@ import {gsap} from "gsap"
 export function JumbotronHome(props) {
    return (
       <header className="header">
-         <div className="jumbotronHome jumbotron-fluid">
+         <div className="jumbotronHome jumbotronSecond jumbotron-fluid">
             <h1 className="jumbotronHome-title">Find your perfect home!</h1>
-            {/* <p className="">Click on an image to earn points, but don't click on any more than once!</p> */}
+            <p className="lead">Type an Address to See Rental Estimates</p>
 
             <div className="searchLocationForm">
                <input
