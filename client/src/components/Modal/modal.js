@@ -1,15 +1,15 @@
-// import React from "react";
+import React from "react";
 
 
-// const Modal = props => {
+const Modal = props => {
 
-//     return (
-//     <div className={props.modal}>
+    return (
+    <div className={props.modal}>
       
-//     </div>
-//     )
-// }
+    </div>
+    )
+}
 
 
 
-// export default Modal
+export default Modal

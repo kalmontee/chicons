@@ -5,6 +5,7 @@ import { JumbotronApartments } from "../components/Jumbotron/Jumbotron";
 import NavBar from "../components/NavBar/NavBar";
 import { Col, Row } from "../components/Grid/Grid"
 // import Modal from "../components/Modal/modal"
+import PosterImage from "../components/PosterImage/image"
 
 
 class Poster extends Component {
@@ -76,6 +77,9 @@ class Poster extends Component {
             handleInputChange={this.handleInputChange}
           />
           <Col size="1" className="emptyCol" />
+          <Col size="md-6">
+            <PosterImage/>
+            </Col>
 {/* <Modal
  className="modal" tabindex="-1" role="dialog">
 <div className="modal-dialog" role="document">

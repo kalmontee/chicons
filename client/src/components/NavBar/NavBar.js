@@ -76,7 +76,7 @@ class NavBar extends Component {
 
                <div className="navbar-title">
                   <Link to="/" className={window.location.pathname === "/" ? "" : ""}>
-                     DreamHome
+                     Fair Space
                   </Link>
                </div>
 

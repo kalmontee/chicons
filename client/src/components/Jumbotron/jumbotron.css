@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 .jumbotron {
   background-image: url("https://images.unsplash.com/photo-1484606075493-62da7cd65654?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80");
   text-align: center;
@@ -21,6 +22,7 @@
 }
 
 .jumbotronHome {
+  
   background-image: url("https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80");
   background-repeat: no-repeat;
   background-attachment: fixed;

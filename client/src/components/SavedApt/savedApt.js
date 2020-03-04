@@ -47,7 +47,7 @@ const SavedApt = props => {
                                 <br></br>
                                 <Row className="buttonDiv ">
                                 <button className="deleteApartment btn btn-danger" id={favedapartment._id} onClick={() => props.handleDeleteButton(favedapartment._id)}>
-                                        Delete Book
+                                        Delete Apt
                                     </button>
                                     
                                 </Row>

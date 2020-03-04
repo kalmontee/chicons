@@ -5,13 +5,77 @@ import {gsap} from "gsap"
 
 
 export function JumbotronHome(props) {
-   return (
-      <header className="header">
-         <div className="jumbotronHome jumbotronSecond jumbotron-fluid">
-            <h1 className="jumbotronHome-title">Find your perfect home!</h1>
-            <p className="lead">Type an Address to See Rental Estimates</p>
+   let header = useRef(null);
+   let title = useRef(null);
+   let paragraph = useRef(null);
+   let search = useRef(null);
+  
+   
 
-            <div className="searchLocationForm">
+   useEffect(() =>{
+      gsap.from(header, 2,{
+         delay: 0.8,
+         ease: "bouce.in",
+         duration: 2.5,
+  
+         y: 50,
+         stagger: {
+            amount:0.15,
+            
+         }
+      })
+
+   },header)
+
+   useEffect(() =>{
+      gsap.from(title, 2,{
+         delay: 1,
+         ease: "power3.out",
+         duration: 1,
+         y: 50,
+         stagger: {
+            amount:0.15,
+            
+         }
+      })
+
+   },title)
+
+   useEffect(() =>{
+      gsap.from(paragraph, 2,{
+         delay: 2,
+         ease: "power3.out",
+         duration: 1,
+         y: 50,
+         stagger: {
+            amount:0.20,
+            
+         }
+      })
+
+   },paragraph)
+   useEffect(() =>{
+      gsap.from(search, 3,{
+         delay: 2,
+         ease: "bounce3.out",
+         duration: 1,
+         fade: 1,
+         
+         x: 50,
+         stagger: {
+            amount:0.25,
+            
+         }
+      })
+
+   },search)
+   return (
+      <header ref={element => header = element} className="header">
+         <div className="jumbotronHome jumbotronSecond jumbotron-fluid">
+            <h1 ref={element => title = element} className="jumbotronHome-title">Find your perfect home!</h1>
+            <p ref={element => paragraph = element} className="lead">Type an Address to See Rental Estimates</p>
+
+            <div ref={element => search = element} className="searchLocationForm">
                <input
                   id="pac-input"
                   type="search"
@@ -56,7 +120,7 @@ export function JumbotronApartments() {
       <div  className="jumbotron jumbotron-fluid">
          <div className="container">
             <h1 ref={element => header1 = element} className="display-4">Fair Space</h1>
-            <p ref={element => header2 = element} className="lead">Post and Look for best spaces in your town</p>
+            <p ref={element => header2 = element} className="lead">Post and Look for best rental deals</p>
          </div>
       </div>
    )

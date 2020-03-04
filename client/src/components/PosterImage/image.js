@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import{gsap} from "gsap"
 
-function Image() {
+function PosterImage() {
     let image = useRef(null);
 
     useEffect(() => {
@@ -21,10 +21,10 @@ gsap.from(image, 2,{
 
   return (
     <div ref={el => image = el} className="apt-image">
-        <img src="./images/apt.png" alt="Apartment" height="420" width="600"></img>
-        <p>"No Place Like Home"</p>
+        <img src="./images/livingRoom.png" alt="Apartment" height="420" width="600"></img>
+        <p>"Welcome To My New Crib"</p>
     </div>
   );
 }
 
-export default Image;
+export default PosterImage;
