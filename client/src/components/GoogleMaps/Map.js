@@ -5,6 +5,7 @@ function MapContainer(props) {
    const mapStyles = {
       width: '56%',
       height: '95%',
+      zIndex: '10',
       position: "fixed"
    }
 
@@ -44,7 +45,7 @@ const LoadingContainer = (props) => (
 )
 
 export default GoogleApiWrapper({
-   apiKey: 'AIzaSyDWUZn7KlbUcbraIe6njU0DFVz-YYN2D_w',
+   apiKey: '',
    LoadingContainer: LoadingContainer,
 })(MapContainer);
 

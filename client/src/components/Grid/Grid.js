@@ -1,5 +1,5 @@
-import React, {useEffect, useRef} from "react";
-import {gsap} from "gsap"
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap"
 
 // Exporting the Container, Row, and Col components from this file
 
@@ -7,16 +7,14 @@ import {gsap} from "gsap"
 export function Container({ fluid, children }) {
   let line1 = useRef(null);
 
-useEffect(() => {
- gsap.from(line1, 0.8,{
-   delay:0.8,
-   ease: "bounce3.in",
-   y:64,
-   stagger: {
-     amount: 2.5
-   }
- })
-}, line1)
+  useEffect(() => {
+    gsap.from(line1, 0.8, {
+      delay: 0.8,
+      ease: "bounce3.in",
+      y: 64,
+      stagger: { amount: 2.5 }
+    });
+  }, [line1])
 
   return <div ref={el => (line1 = el)} className={`container${fluid ? "-fluid" : ""}`}>{children}</div>;
 }

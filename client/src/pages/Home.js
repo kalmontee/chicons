@@ -2,65 +2,63 @@ import React, { Component } from 'react';
 import NavBar from "../components/NavBar/NavBar";
 import { JumbotronHome } from '../components/Jumbotron/Jumbotron';
 import { List, ListItem } from "../components/List/list";
-import { Container, Row, Col } from "../components/Grid/Grid";
+import { Container, Row } from "../components/Grid/Grid";
 import MapContainer from '../components/GoogleMaps/Map';
 import API from '../utils/API';
 import './home.css'
 
 class Home extends Component {
    state = {
-      search: '',
-      apartments: [],
-      visible: false,
+      search: '', // Search Input
+      name: '', // Naming the Marker
+      title: '', // Naming the Marker
+      apartments: [], // Displaying all apartments from the second API
+      visible: false, // Making google maps visable
       selectedMarker: false,
-      name: '',
-      title: '',
-      lat: null,
-      lng: null,
+      lat: 40.7878788,
+      lng: -74.0143064,
       zoom: 15,
    }
 
    handleFormSearchSubmit = () => this.searchApartmentLocation(this.state.search);
 
-   // Making a request to Google Maps API (geocode)
+   // Making a request to Google Maps API (geocode) along with the second API
    searchApartmentLocation = (search) => {
-      // Second API listing all the apartments
-      API.searchApartments(search)
-         .then(res => {
-            console.log(res.data.listings)
-
-            this.setState({
-               // google: res.data.listings.formattedAddress,
-               apartments: res.data.listings,
-               lat: res.data.listings[0].latitude,
-               lng: res.data.listings[0].longitude,
-               title: res.data.listings,
-               name: res.data.listings
-            });
-         })
-         .catch(err => console.log(err));
 
       // Google Maps Search
       API.googleMaps(search)
          .then(res => {
-            console.log(res.data.results[0]);
-            this.setState({ zoom: 15, visible: true, });
+            // Data is the results of Google Maps input search. 
+            let data = res.data.results[0];
+
+            console.log("This is Google Maps data ", data);
+            this.setState({
+               zoom: 15,
+               visible: true,
+               lat: data.geometry.location.lat,
+               lng: data.geometry.location.lng
+            });
+
+            // Second API functioning with google maps.
+            // Here we're passing Google Maps geocode latitude and longitude from the user's input search and feeding it to the second API to get results back from that exact location.
+            API.searchApartments(data.geometry.location.lat, data.geometry.location.lng)
+               .then(results => {
+                  console.log("This is the second API data ", results.data)
+
+                  this.setState({
+                     apartments: results.data.listings,
+                     title: results.data.listings,
+                     name: results.data.listings
+                  });
+               })
+               .catch(err => alert(err));
          })
          .catch(err => alert(err));
    }
 
-   handleClickMarker = (marker, event) => {
+   handleClickMarker = (marker) => {
       console.log({ marker })
       this.setState({ selectedMarker: marker })
-   }
-
-   handleSavedButton = id => {
-      console.log(id)
-      console.log(this.state.apartments)
-
-      API.setSavedApartments(id)
-         .then(this.setState({ message: alert("Your Apartment is saved") }))
-         .catch(err => console.log(err))
    }
 
    handleSearchInput = (event) => {
@@ -73,7 +71,6 @@ class Home extends Component {
          <div className="home-page">
             <NavBar />
             <JumbotronHome
-               location={this.state.location}
                handleSearchInput={this.handleSearchInput}
                handleFormSearchSubmit={this.handleFormSearchSubmit} />
 
@@ -96,20 +93,19 @@ class Home extends Component {
                            <strong>
                               <ul>
                                  <Row>
-                                    <p>Address: </p>
-                                    {result.formattedAddress}
+                                    <p className="results_title" >Address: <span className="results_apartments">{result.formattedAddress}</span></p>
                                  </Row>
                                  <Row>
-                                    <p>Rental Price:</p>
-                                    {result.price}
+                                    <p className="results_title">Rental Price: <span className="results_apartments">{result.price}</span></p>
                                  </Row>
                                  <Row>
-                                    <p>Bedrooms:</p>
-                                    {result.bedrooms}
+                                    <p className="results_title">Bedrooms: <span className="results_apartments">{result.bedrooms}</span></p>
                                  </Row>
                                  <Row>
-                                    <p>Bathrooms:</p>
-                                    {result.bathrooms}
+                                    <p className="results_title">Bathrooms: <span className="results_apartments">{result.bathrooms}</span></p>
+                                 </Row>
+                                 <Row>
+                                    <p className="results_title">Property Type: <span className="results_apartments">{result.propertyType}</span></p>
                                  </Row>
                               </ul>
                            </strong>

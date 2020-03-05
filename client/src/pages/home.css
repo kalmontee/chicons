@@ -10,3 +10,11 @@
   -webkit-box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.73);
   box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.73);
 }
+
+.results_apartments {
+  font-weight: normal;
+}
+
+.results_title {
+  font-size: 17px;
+}

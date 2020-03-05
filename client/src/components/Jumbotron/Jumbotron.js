@@ -1,74 +1,55 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import './jumbotron.css';
-import {gsap} from "gsap"
-
-
+import { gsap } from "gsap"
 
 export function JumbotronHome(props) {
    let header = useRef(null);
    let title = useRef(null);
    let paragraph = useRef(null);
    let search = useRef(null);
-  
-   
 
-   useEffect(() =>{
-      gsap.from(header, 2,{
+   useEffect(() => {
+      gsap.from(header, 2, {
          delay: 0.8,
          ease: "bouce.in",
          duration: 2.5,
-  
          y: 50,
-         stagger: {
-            amount:0.15,
-            
-         }
-      })
+         stagger: { amount: 0.15 }
+      });
 
-   },header)
+   }, [header])
 
-   useEffect(() =>{
-      gsap.from(title, 2,{
+   useEffect(() => {
+      gsap.from(title, 2, {
          delay: 1,
          ease: "power3.out",
          duration: 1,
          y: 50,
-         stagger: {
-            amount:0.15,
-            
-         }
-      })
+         stagger: { amount: 0.15 }
+      });
+   }, [title])
 
-   },title)
-
-   useEffect(() =>{
-      gsap.from(paragraph, 2,{
+   useEffect(() => {
+      gsap.from(paragraph, 2, {
          delay: 2,
          ease: "power3.out",
          duration: 1,
          y: 50,
-         stagger: {
-            amount:0.20,
-            
-         }
+         stagger: { amount: 0.20 }
       })
+   }, [paragraph])
 
-   },paragraph)
-   useEffect(() =>{
-      gsap.from(search, 3,{
+   useEffect(() => {
+      gsap.from(search, 3, {
          delay: 2,
          ease: "bounce3.out",
          duration: 1,
          fade: 1,
-         
          x: 50,
-         stagger: {
-            amount:0.25,
-            
-         }
-      })
+         stagger: { amount: 0.25 }
+      });
+   }, [search])
 
-   },search)
    return (
       <header ref={element => header = element} className="header">
          <div className="jumbotronHome jumbotronSecond jumbotron-fluid">
@@ -100,24 +81,21 @@ export function JumbotronHome(props) {
 export function JumbotronApartments() {
    let header1 = useRef(null);
    let header2 = useRef(null);
-   
 
-   useEffect(() =>{
-      gsap.from([header1, header2], 2,{
+   useEffect(() => {
+      gsap.from([header1, header2], 2, {
          delay: 0.8,
          ease: "power3.out",
          fade: 1,
          duration: 2.5,
          y: 50,
-         stagger: {
-            amount:0.15,
-            
-         }
-      })
+         stagger: { amount: 0.15 }
+      });
 
-   },[header1, header2])
+   }, [header1, header2])
+
    return (
-      <div  className="jumbotron jumbotron-fluid">
+      <div className="jumbotron jumbotron-fluid">
          <div className="container">
             <h1 ref={element => header1 = element} className="display-4">Fair Space</h1>
             <p ref={element => header2 = element} className="lead">Post and Look for best rental deals</p>
@@ -127,7 +105,7 @@ export function JumbotronApartments() {
 }
 
 export function JumbotronSecond() {
-   return(
+   return (
       <div className="jumbotron jumbotronSecond jumbotron-fluid">
          <div className="container">
             <h1 className="display-4">Fair Space</h1>
