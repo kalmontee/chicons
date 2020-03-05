@@ -65,11 +65,11 @@ class NavBar extends Component {
                         </Link>
 
                         <Link to="/apartments" className={window.location.pathname === "/apartments" ? "navbarTabsLink" : "favoritesLinkClick"}>
-                           Apartments
+                           Post Your Apartments
                         </Link>
 
                         <Link to="/seeker" className={window.location.pathname === "/seeker" ? "navbarTabsLink" : "favoritesLinkClick"}>
-                           Seeker
+                           Listed Apartments
                         </Link>
                      </div>
                   )}
