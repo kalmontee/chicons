@@ -3,8 +3,6 @@ import API from "../utils/API";
 import NavBar from '../components/NavBar/NavBar';
 import { Container } from "../components/Grid/Grid"
 import SavedApt from "../components/SavedApt/savedApt";
-import Footer from "../components/Footer/footer"
-
 
 
 class Favorites extends Component {
@@ -34,7 +32,7 @@ class Favorites extends Component {
                <SavedApt favedApartments={this.state.favedApartments} handleDeleteButton={this.handleDeleteButton} />
 
             </Container>
-            <Footer/>
+           
          </div>
       )
    }
