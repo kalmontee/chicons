@@ -4,9 +4,9 @@ const axios = require("axios");
 require("dotenv").config();
 
 const BASEURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
+const placeBaseURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
+const placeEndURL = "+point+of+interest&language=en";
 const APIKEY = process.env.REACT_APP_GOOGLE_API_KEY;
-
-const FIREBASE = process.env.REACT_APP_FIREBASE_API_KEY;
 
 // Defining methods for the booksController
 module.exports = {
@@ -61,11 +61,9 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-  // firebase(req, res) {
-  //   axios.get(`${FIREBASE}`)
-  //     .then(apiKey => {
-  //       res.json(apiKey)
-  //     })
-  //     .catch(err = res.status(422).json(err));
-  // }
+  googlePlaces(req, res) {
+    axios.get(`${placeBaseURL}${req.params.search}${placeEndURL}${APIKEY}`)
+      .then(response => res.json(response.data.results))
+      .catch(err =>  res.status(422).json(err))
+  }
 };

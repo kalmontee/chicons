@@ -30,4 +30,8 @@ export default {
   googleMaps(search) {
     return axios.get("/api/apartments/google/" + search)
   },
+
+  googlePlaces(search) {
+    return axios.get("/api/apartments/googlePlaces/" + search)
+  }
 };

@@ -3,15 +3,15 @@ const aptController = require("../../controllers/aptControllers");
 
 
 router
-.route("/test")
-.get(aptController.findFav)
+  .route("/test")
+  .get(aptController.findFav)
 
 // Matches with "/api/apartments"
 router.route("/")
   .get(aptController.findAll)
   .post(aptController.create);
 
- // Matches with "/api/apartments/:id"
+// Matches with "/api/apartments/:id"
 router
   .route("/:id")
   .get(aptController.findById)
@@ -22,11 +22,8 @@ router
   .route("/google/:search")
   .get(aptController.google);
 
-// router
-// .route("/firebase/:apiKey")
-// .get(aptController.firebase);
-
-// console.log(router.route("/firebase")
-// .get(aptController.firebase));
+router
+  .route("/googlePlaces/:search")
+  .get(aptController.googlePlaces)
 
 module.exports = router;

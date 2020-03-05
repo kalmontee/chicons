@@ -109,11 +109,6 @@ class Home extends Component {
                                  </Row>
                               </ul>
                            </strong>
-                           <a href="https://www.google.com/maps/place/205+Palisade+Ave,+Jersey+City,+NJ+07306/@40.736091,-74.0519487,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25746381375a7:0xa183ae5eefb12dfc!8m2!3d40.736087!4d-74.04976" target="_blank">
-                              <button className="viewApartment btn btn-success">
-                                 View Apt
-                              </button>
-                           </a>
                         </ListItem>
                      ))}
                   </List>
