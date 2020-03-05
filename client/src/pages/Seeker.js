@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import NavBar from '../components/NavBar/NavBar';
 import { JumbotronApartments } from "../components/Jumbotron/Jumbotron";
-import API from "../utils/API";
+import API from "../utils/API"
 import { Col, Row, Container } from "../components/Grid/Grid";
 import Image from "../components/SeekerImage/image";
+import Footer from "../components/Footer/footer";
 import '../index.css';
 
-
 class Seeker extends Component {
-
+  
   state = {
     apartments: [],
     address: "",
@@ -23,14 +23,11 @@ class Seeker extends Component {
   loadApartments = () => {
     API.getApartments()
       .then(res =>
-        this.setState({ apartments: res.data, address: "", bedroom: "", description: "", phonenumber: "" })
-      )
+        this.setState({ apartments: res.data, address: "", bedroom: "", description: "", phonenumber: "" }))
       .catch(err => console.log(err));
   };
 
   handleSavedButton = id => {
-    // console.log(event)
-    // event.preventDefault();
     console.log(id)
 
     console.log(this.state.apartments)
@@ -41,8 +38,6 @@ class Seeker extends Component {
       .then(this.setState({ message: alert("Your Apartment is saved") }))
       .catch(err => console.log(err))
   }
-
-
 
   render() {
     return (
@@ -94,13 +89,10 @@ class Seeker extends Component {
             </Col>
           </Row>
         </Container>
-
+        <Footer/>
       </div>
-
     )
   }
 }
 
 export default Seeker;
-
-

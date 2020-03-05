@@ -1,0 +1,86 @@
+@media only screen and (max-width: 640px) {
+    .menu {
+        width: 95%;
+        margin: 30px 25px 0 10px;
+    }
+    .aside {
+        width: 95%;
+        margin: 0 25px 0 10px;
+    }
+    footer {
+        padding: 0 10px;
+    }
+}
+
+
+/*******Footer*******/
+
+footer {
+    background-color: #343a40 !important;
+    margin-top: 10px;
+}
+
+div.logo-footer {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: rgb(199, 199, 199);
+}
+
+div.logo-footer i {
+    color: rgb(58, 143, 223);
+}
+
+div.footer-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.resources h6 {
+    color: gray;
+}
+
+div.resources-info {
+    color: white;
+}
+
+div.resources-info h5 a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+div.resources-info h5 a:hover {
+    color: rgb(58, 143, 223);
+}
+
+div.footer-end p {
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+div.resources ul li a {
+    font-size: 18px;
+    padding: 5px;
+    color: #fff;
+}
+
+div.resources ul li a:hover {
+    color: rgb(58, 143, 223);
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 1064px) {
+    footer {
+        padding: 0 10px;
+    }
+}

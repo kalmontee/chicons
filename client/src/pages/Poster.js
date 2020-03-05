@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar/NavBar";
 import { Col, Row } from "../components/Grid/Grid"
 // import Modal from "../components/Modal/modal"
 import PosterImage from "../components/PosterImage/image"
+import Footer from "../components/Footer/footer"
 
 
 class Poster extends Component {
@@ -100,6 +101,7 @@ class Poster extends Component {
 
 </Modal> */}
         </Row>
+        <Footer/>
       </div>
     )
   }

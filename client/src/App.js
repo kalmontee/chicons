@@ -7,6 +7,7 @@ import Poster from "./pages/Poster";
 import Seeker from "./pages/Seeker";
 import Favorites from "./pages/Favorites";
 
+
 function App() {
     return (
       <Router>
