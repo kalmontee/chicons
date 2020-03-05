@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Fair-Space
+Fair Space is an online apartment listing website, offering renters access to information on available units for rent listed by directly by landlords themselves.  It's powered by Google Maps, and Rent Estimate APIs to give the consumer the information needed to list and look for fair rental prices.  
 
-## Available Scripts
+Fair Space creates easy access to its listings and makes simple for landlords to post their apartmemts for rent.  The website and mobile resposible and offers a simple navigation bar for users to easily manuver from page to page.
 
-In the project directory, you can run:
+Please Click on this [link](https://sleepy-brook-31584.herokuapp.com/) to Check the App out.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Frontend  | Backend |
+| ------------- | ------------- |
+| HTML | Nodejs |
+| CSS  | Express |
+| Javascript | MongoDB (Mongoose)|
+| SASS | Axios |
+|Google Fonts| Node-SASS
+|React| Dotenv
+|Gsap|
+|Firebase|
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+- Click to either sign in or sign up. After signing in you have the choice to punch in an address into our home search input to look for apartments in a desired area.  This aciton will return five comparables so you can get an idea of how much apartments are renting in that area.  You can click on the view apt. button to look up the action location through google maps.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+At that point you can either list an apartment for rent or you can serve our database for listed apartments.  User can add apts to favorites and then delete them if neeed.  The listings cosist of the price, number of bedrooms, a description, and the contact info for the landlord.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Must meet all CRUD methods 
+Fair Space covers Create Method by allowing the user to post apartments to our database through a form.  The user is also able to add listings to favorites page(this covers the Update method).  You can also search our database for listing, which accomplishes the GET method.  The user can also remove apartments that they've favored by deleting the apartment and this covers the Delete method. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Polished UI 
+We used CSS, SASS, Bootstrap and GSAP to accomplished a very polished UI
 
 ### Deployment
+App is fully deployed to Heroku
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Two New Technologies
 
-### `npm run build` fails to minify
+ Firebase, Gsap(GreenSock), SASS
+ 
+ ## Authors:
+ 
+ **Kelvin Almonte** - [link](https://github.com/kalmontee)
+ **Felix Fernandez** - [link](https://github.com/jetsgreen)
+ 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+
+
