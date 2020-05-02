@@ -3,7 +3,8 @@ Fair Space is an online apartment listing website, offering renters access to in
 
 Fair Space gives easy access to its listings and makes it simple for landlords to post their apartmemts for rent.  The website is mobile responsive and offers a simple navigation bar for users to easily manuver from page to page.
 
-Please Click on this [link](https://sleepy-brook-31584.herokuapp.com/) to Check the App out.
+## Demo
+To check the App out click here --> [fairspace.herokuapp.com](https://fairspace.herokuapp.com/).
 
 ## Technologies Used
 
