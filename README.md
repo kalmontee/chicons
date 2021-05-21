@@ -58,7 +58,7 @@ If making a pull request then simply start with a ``` npm install ``` to install
 ## Requirements
 
 ### Must meet all CRUD methods 
-Fair Space covers Create Method by allowing the user to post apartments to our database through a form.  The user is also able to add listings to favorites page(this covers the Update method).  You can also search our database for listing, which accomplishes the GET method.  The user can also remove apartments that they've favored by deleting the apartment and this covers the Delete method.
+Fair Space covers CRUD Method by allowing the user to post apartments to our database through a form. The user is also able to add listings to favorites page(this covers the Update method).  You can also search our database for listing, which accomplishes the GET method.  The user can also remove apartments that they've favored by deleting the apartment and this covers the Delete method.
 
 ### Polished UI 
 We used CSS, SASS, Bootstrap and GSAP to accomplished a very polished UI
@@ -66,26 +66,18 @@ We used CSS, SASS, Bootstrap and GSAP to accomplished a very polished UI
 ### Deployment
 App is fully deployed to Heroku.
 
-Link to App is being listed at the beginning of the README.
-
-### Two New Technologies
-
- Firebase, Gsap(GreenSock), SASS
+Link to App: [fairspace.herokuapp.com](https://fairspace.herokuapp.com/)
  
- ## Authors:
+## Authors:
  
- **Kelvin Almonte** - [kalmontee](https://github.com/kalmontee)
+**Kelvin Almonte** - [kalmontee](https://github.com/kalmontee)
 
- **Felix Fernandez** - [jetsgreen](https://github.com/jetsgreen)
+**Felix Fernandez** - [jetsgreen](https://github.com/jetsgreen)
 
- ## Acknowledgments
+## Acknowledgments
 
- Special thanks to our lovely TAs for helping us through this project and the entire course.
+pecial thanks to our lovely TAs for helping us through this project and the entire course.
 
- **Francisco Cruz** - [fcruz219](https://github.com/fcruz219)
+**Francisco Cruz** - [fcruz219](https://github.com/fcruz219)
 
- **Leigh** - [GitHub](https://github.com/)
-
- ## License
-
- This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+**Leigh**
