@@ -28,13 +28,7 @@ class Seeker extends Component {
   };
 
   handleSavedButton = id => {
-    console.log(id)
-
-    console.log(this.state.apartments)
-    // let savedApartments = this.state.apartments.filter(apartment => apartment._id === event.target._id)
-    // savedApartments = savedApartments[0];
     API.setSavedApartments(id)
-      // console.log(savedApartmentss)
       .then(this.setState({ message: alert("Your Apartment is saved") }))
       .catch(err => console.log(err))
   }

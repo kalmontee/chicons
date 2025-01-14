@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // testing 
   searchApartments: function (latitude, longitude) {
-    return axios(`https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice?compCount=20&latitude=${latitude}&longitude=${longitude}&rapidapi-key=ff2af2325emsha371561b7ddfacdp1148eajsnd3bfbea4cf52`);
+    return axios(`https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice?compCount=20&latitude=${latitude}&longitude=${longitude}&rapidapi-key={process.env.REACT_APP_REALTYMOLE_API_KEY}`);
   },
   // Gets all apartments
   getApartments: function () {

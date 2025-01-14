@@ -62,11 +62,9 @@ export class SignIn extends Component {
 
       fire.auth().signInWithEmailAndPassword(email, password)
          .then(user => {
-            console.log(user);
             this.props.history.push('/');
          })
          .catch(err => {
-            console.log(err);
             this.setState({ message: "*Incorrect Password or Email" });
          });
    }
@@ -191,11 +189,9 @@ export class SignUp extends Component {
 
       fire.auth().createUserWithEmailAndPassword(email, password)
          .then(user => {
-            console.log(user);
             this.props.history.push('/');
          })
          .catch(err => {
-            console.log(err);
             this.setState({ message: "*The email address is already in use by another account. Please try another one." });
          });
    }

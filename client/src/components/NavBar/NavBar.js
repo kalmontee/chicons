@@ -51,8 +51,6 @@ class NavBar extends Component {
 
       return (
          <div className="navbar_container">
-            {/* {this.state.signInModal || this.state.signUpModal ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null} */}
-
             <nav className="navbar">
                {!this.state.user ? (
                   <div className="navtabs-links">

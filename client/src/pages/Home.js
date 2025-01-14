@@ -9,11 +9,11 @@ import './home.css'
 
 class Home extends Component {
    state = {
-      search: '', // Search Input
-      name: '', // Naming the Marker
-      title: '', // Naming the Marker
-      apartments: [], // Displaying all apartments from the second API
-      visible: false, // Making google maps visable
+      search: '',
+      name: '',
+      title: '',
+      apartments: [],
+      visible: false,
       selectedMarker: false,
       lat: 40.7878788,
       lng: -74.0143064,
@@ -28,10 +28,8 @@ class Home extends Component {
       // Google Maps Search
       API.googleMaps(search)
          .then(res => {
-            // Data is the results of Google Maps input search. 
             let data = res.data.results[0];
 
-            console.log("This is Google Maps data ", data);
             this.setState({
                zoom: 15,
                visible: true,
@@ -43,7 +41,6 @@ class Home extends Component {
             // Here we're passing Google Maps geocode latitude and longitude from the user's input search and feeding it to the second API to get results back from that exact location.
             API.searchApartments(data.geometry.location.lat, data.geometry.location.lng)
                .then(results => {
-                  console.log("This is the second API data ", results.data)
 
                   this.setState({
                      apartments: results.data.listings,
@@ -57,7 +54,6 @@ class Home extends Component {
    }
 
    handleClickMarker = (marker) => {
-      console.log({ marker })
       this.setState({ selectedMarker: marker })
    }
 

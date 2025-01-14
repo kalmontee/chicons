@@ -20,7 +20,6 @@ class Favorites extends Component {
 
    }
    handleDeleteButton = (id) => {
-      console.log(id)
       API.deleteApartment(id)
          .then(res => this.componentDidMount())
          .catch(err => console.log(err))
