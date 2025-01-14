@@ -38,17 +38,7 @@ npm creat-react-app .
 
 Must install its depencies for this project.
 ```
-npm install axios
-npm install firebase
-npm install react-router-dom
-npm install google-maps-react
-npm install dotenv
-npm install express
-npm install gsap
-npm install mongoose
-npm install node-sass
-npm install nodemon
-npm start
+npm install
 ```
 
 If making a pull request then simply start with a ``` npm install ``` to install all the packages provided.
