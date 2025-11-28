@@ -1,73 +1,88 @@
 # Fair-Space
-Fair Space is an online apartment listing website, offering renters access to information on available units for rent posted directly by landlords themselves.  It's powered by Google Maps, and Rent Estimate APIs to give the consumer the information needed to list and look for fair rental prices.  
 
-Fair Space gives easy access to its listings and makes it simple for landlords to post their apartmemts for rent.  The website is mobile responsive and offers a simple navigation bar for users to easily manuver from page to page.
+Fair-Space is an online apartment listing platform that connects renters directly with landlords. It’s powered by Google Maps and Rent Estimate APIs to help users explore neighborhoods, compare rental prices, and list apartments with confidence.
 
-## Demo
-To check the App out click here --> [fairspace.herokuapp.com](https://fairspace.herokuapp.com/).
+The site is fully responsive, easy to navigate, and built to make browsing and posting rentals straightforward for everyone.
 
-## Technologies Used
+## 🚀 Demo
+Check out the live app here: **[fairspace.herokuapp.com](https://fairspace.herokuapp.com/)**
 
-| Frontend  | Backend |
-| ------------- | ------------- |
-| React| Nodejs |
+---
+
+## 🛠️ Technologies Used
+
+| Frontend | Backend |
+|---------|---------|
+| React | Node.js |
 | SASS | Express |
-| Google Fonts| MongoDB (Mongoose)|
-| Gsap | Axios |
-| Firebase | Node-SASS
+| Google Fonts | MongoDB (Mongoose) |
+| GSAP | Axios |
+| Firebase | node-sass |
 
+---
 
-## Usage
+## 📌 Usage
 
-- Click to either sign in or sign up. After signing in you have the choice to punch in an address into our home search input to look for apartments in a desired area.  This aciton will return five comparables so you can get an idea of how much apartments are renting in that area.  You can click on the view apt. button to look up the actual location through google maps.
+- Sign in or create an account to get started.
+- Enter an address in the home search bar to explore rentals in a specific area. The app returns five comparable listings to help you understand local market prices.
+- View apartment locations using Google Maps.
+- Post your own rental listing or browse existing ones.
+- Add apartments to your favorites and remove them anytime.
+- Listings include price, bedrooms, description, and landlord contact info.
 
-- At that point you can either list an apartment for rent or you can serve our database for listed apartments.  User can add apts to favorites and then delete them if neeed.  The listings cosist of the price, number of bedrooms, a description, and the contact info for the landlord.
+---
 
-## Prerequisites
+## 📦 Prerequisites
 
-If you never installed or used React before. Begin with a simple npm install -g creat-react-app
+If you haven’t used React before, install `create-react-app` globally:
 
-```
+```bash
 npm install -g create-react-app
 ```
 
-Then begin with a simple install creat-react-app.
-```
-npm creat-react-app .
-```
-
-Must install its depencies for this project.
+Install dependencies:
 ```
 npm install
 ```
 
-If making a pull request then simply start with a ``` npm install ``` to install all the packages provided.
+If contributing, start with:
+```
+npm install
+```
 
-** Must provide an npm install for dotenv and provide your own private API keys to run this App. **
+Note: You'll need to install dotenv and provide your own API keys to run the app.
 
-## Requirements
+## 📚 Requirements
 
-### Must meet all CRUD methods 
-Fair Space covers CRUD Method by allowing the user to post apartments to our database through a form. The user is also able to add listings to favorites page(this covers the Update method).  You can also search our database for listing, which accomplishes the GET method.  The user can also remove apartments that they've favored by deleting the apartment and this covers the Delete method.
+### ✔️ Full CRUD Functionality
+Fair-Space supports all core CRUD operations:
 
-### Polished UI 
-We used CSS, SASS, Bootstrap and GSAP to accomplished a very polished UI
+- **Create:** Post new apartment listings.  
+- **Read:** Search and browse available units.  
+- **Update:** Save listings to your favorites.  
+- **Delete:** Remove items from your favorites list.  
 
-### Deployment
-App is fully deployed to Heroku.
+---
 
-Link to App: [fairspace.herokuapp.com](https://fairspace.herokuapp.com/)
- 
-## Authors:
- 
-**Kelvin Almonte** - [kalmontee](https://github.com/kalmontee)
+### 🎨 Polished UI
+Crafted with **CSS**, **SASS**, **Bootstrap**, and **GSAP** for smooth visuals, animations, and an overall clean user experience.
 
-**Felix Fernandez** - [jetsgreen](https://github.com/jetsgreen)
+---
 
-## Acknowledgments
+### ☁️ Deployment
+Fair-Space is fully deployed on Heroku.  
+Live link: **[fairspace.herokuapp.com](https://fairspace.herokuapp.com/)**
 
-pecial thanks to our lovely TAs for helping us through this project and the entire course.
+---
 
-**Francisco Cruz** - [fcruz219](https://github.com/fcruz219)
+## 👥 Authors
+**Kelvin Almonte** – [kalmontee](https://github.com/kalmontee)  
+**Felix Fernandez** – [jetsgreen](https://github.com/jetsgreen)
 
-**Leigh**
+---
+
+## 🙌 Acknowledgments
+Special thanks to our awesome TAs for guiding us throughout the project:
+
+- **Francisco Cruz** – [fcruz219](https://github.com/fcruz219)  
+- **Leigh**
