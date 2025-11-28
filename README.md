@@ -52,6 +52,8 @@ npm install
 
 Note: You'll need to install dotenv and provide your own API keys to run the app.
 
+---
+
 ## 📚 Requirements
 
 ### ✔️ Full CRUD Functionality
